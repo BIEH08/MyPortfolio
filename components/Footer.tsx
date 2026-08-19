@@ -3,6 +3,31 @@ import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
 
+const EMAIL = "ryanhernandez.0798@gmail.com";
+
+const SUBJECT = "Let's work together";
+
+/**
+ * Pre-filled draft. It asks for the four things that decide whether a
+ * conversation is worth having, so the first reply already has them.
+ */
+const BODY = `Hi Bryan,
+
+I came across your portfolio and I would like to get in touch.
+
+  Company:
+  Role or project:
+  What we are looking for:
+  Timeline:
+
+Looking forward to hearing from you.
+
+Best regards,`;
+
+const MAILTO = `mailto:${EMAIL}?subject=${encodeURIComponent(
+	SUBJECT
+)}&body=${encodeURIComponent(BODY)}`;
+
 const Footer = () => {
 	return (
 		<footer className="w-full pt-10 pb-10" id="contact">
@@ -16,12 +41,12 @@ const Footer = () => {
 			<div className="flex flex-col items-center">
 				<h1 className="heading lg:max-w-[45vw]">
 					Ready to work <span className="text-purple">together</span> and change
-					de world with digital solutions?
+					the world with digital solutions?
 				</h1>
 				<p className="text-white-200 md:mt-10 my-5 text-center">
 					Reach out to me today and let&apos;s discuss how I can help you.
 				</p>
-				<a href="https://www.upwork.com/freelancers/~019acc1a3f6be6b153?mp_source=share">
+				<a href={MAILTO}>
 					<MagicButton
 						title="Let's get in touch"
 						icon={<FaLocationArrow />}
@@ -31,7 +56,7 @@ const Footer = () => {
 			</div>
 			<div className="flex md:flex-row flex-col justify-between items-center mt-16">
 				<p className="md:text-base text-sm md:font-normal font-light">
-					Copyright © 2024 Bryan Escamilla
+					Copyright © 2026 Bryan Escamilla
 				</p>
 				<div className="flex items-center md:gap-3 gap-6">
 					{socialMedia.map((profile) => (

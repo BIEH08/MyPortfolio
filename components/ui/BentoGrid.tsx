@@ -52,9 +52,7 @@ export const BentoGridItem = ({
 	const [copied, setCopied] = useState(false);
 
 	const handleCopy = () => {
-		navigator.clipboard.writeText(
-			"https://www.upwork.com/freelancers/~019acc1a3f6be6b153?mp_source=share"
-		);
+		navigator.clipboard.writeText("ryanhernandez.0798@gmail.com");
 		setCopied(true);
 	};
 	return (
@@ -127,7 +125,7 @@ export const BentoGridItem = ({
 							</div>
 							<div className="flex flex-col gap-1 lg:gap-2">
 								<span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-								{["Sass", "Tailwind Css", "NativeWind", "GSAP"].map((item) => (
+								{["TypeScript", "Python", "Node.js", "FastAPI"].map((item) => (
 									<span
 										key={item}
 										className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -138,7 +136,7 @@ export const BentoGridItem = ({
 							</div>
 							<div className="flex flex-col gap-1 lg:gap-2">
 								<span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-								{["React.js", "ReactNative", "Next.js", "Three.Js"].map(
+								{["MCP", "LangGraph", "Playwright", "Vitest"].map(
 									(item) => (
 										<span
 											key={item}
@@ -152,7 +150,7 @@ export const BentoGridItem = ({
 							</div>
 							<div className="flex flex-col gap-1 lg:gap-2">
 								<span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-								{["HTML5", "CSS3", "JavaScript", "TypeScript"].map((item) => (
+								{["React", "Next.js", "PostgreSQL", "Google Cloud"].map((item) => (
 									<span
 										key={item}
 										className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]"
@@ -177,15 +175,13 @@ export const BentoGridItem = ({
 									}}
 								/>
 							</div>
-							<a download href="./resume.pdf">
-								<MagicButton
-									title={copied ? "Resume downloaded" : "Download resume"}
-									icon={<IoCopyOutline />}
-									position="left"
-									otherClasses="!bg-[#161a31]"
-									handleClick={handleCopy}
-								/>
-							</a>
+							<MagicButton
+								title={copied ? "Email copied" : "Copy my email address"}
+								icon={<IoCopyOutline />}
+								position="left"
+								otherClasses="!bg-[#161a31]"
+								handleClick={handleCopy}
+							/>
 						</div>
 					)}
 				</div>
